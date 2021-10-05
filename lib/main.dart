@@ -17,8 +17,11 @@ class NewsFeed extends StatelessWidget {
         title: Text("Sky News"),
           centerTitle: true,
       ),
-      body: Center(
-        child: Text("Home Screen of application"),
+      body: Column(
+        children: [Image.asset('images/SFR-4g-620.jpg'),
+         Text("this a text"),
+        IconButton(onPressed: (){},
+            icon: Icon(Icons.person))],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
