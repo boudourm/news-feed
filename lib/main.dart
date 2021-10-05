@@ -1,8 +1,36 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: NewsFeed(),
+  ));
 }
+
+class NewsFeed extends StatelessWidget {
+  const NewsFeed({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: Text("Sky News"),
+          centerTitle: true,
+      ),
+      body: Center(
+        child: Text("Home Screen of application"),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          print("hey I'm clicked");
+        },
+        child: Icon(Icons.account_box_outlined),
+        backgroundColor: Colors.amber,
+      ),
+    );
+  }
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
