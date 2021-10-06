@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/deadline.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -51,8 +52,36 @@ class NewsFeed extends StatelessWidget {
                   SizedBox(height: 16,),
                   Expanded(
                     child: Image.asset(
-                      "images/respecter-deadline-freelance-700x525.jpg"
+                      "images/Six-Tips-to-Ensure-you-Never-Miss-Another-Deadline.jpg"
                     ),
+                  ),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Row(
+                          children: [
+                            IconButton(onPressed: (){print("thumb_down clicked");},
+                            icon: Icon(Icons.thumb_down)),
+                            Text("Dislike")
+                            ]
+                        ),
+                        Row(
+                            children: [
+                              IconButton(onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Deadline()));
+                                print("read_more clicked");},
+                                  icon: Icon(Icons.read_more)),
+                              Text("Read more")
+                            ]
+                        ),
+                        Row(
+                            children: [
+                              IconButton(onPressed: (){print("share clicked");},
+                                  icon: Icon(Icons.share)),
+                              Text("Share")
+                            ]
+                        )
+                      ]
                   )
                 ],
               )
