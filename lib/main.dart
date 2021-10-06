@@ -87,6 +87,116 @@ class NewsFeed extends StatelessWidget {
               )
 
             )
+          ),
+          Card(
+              child: Container(
+                  height: 300,
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage: AssetImage('images/user1.png'),
+                        ),
+                        onTap: (){print("the listTile is clicked");},
+                        title: Text("User 1"),
+                        subtitle: Text("march 31 2021"),
+                        trailing: Icon(Icons.more_horiz),
+                      ),
+                      Text("Deadlines help you to keep moving and deliver"
+                          "content faster and it will increase your efficiency as well."),
+                      SizedBox(height: 16,),
+                      Expanded(
+                        child: Image.asset(
+                            "images/Six-Tips-to-Ensure-you-Never-Miss-Another-Deadline.jpg"
+                        ),
+                      ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Row(
+                                children: [
+                                  IconButton(onPressed: (){print("thumb_down clicked");},
+                                      icon: Icon(Icons.thumb_down)),
+                                  Text("Dislike")
+                                ]
+                            ),
+                            Row(
+                                children: [
+                                  IconButton(onPressed: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Deadline()));
+                                    print("read_more clicked");},
+                                      icon: Icon(Icons.read_more)),
+                                  Text("Read more")
+                                ]
+                            ),
+                            Row(
+                                children: [
+                                  IconButton(onPressed: (){print("share clicked");},
+                                      icon: Icon(Icons.share)),
+                                  Text("Share")
+                                ]
+                            )
+                          ]
+                      )
+                    ],
+                  )
+
+              )
+          ),
+          Card(
+              child: Container(
+                  height: 300,
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage: AssetImage('images/user1.png'),
+                        ),
+                        onTap: (){print("the listTile is clicked");},
+                        title: Text("User 1"),
+                        subtitle: Text("march 31 2021"),
+                        trailing: Icon(Icons.more_horiz),
+                      ),
+                      Text("Deadlines help you to keep moving and deliver"
+                          "content faster and it will increase your efficiency as well."),
+                      SizedBox(height: 16,),
+                      Expanded(
+                        child: Image.asset(
+                            "images/Six-Tips-to-Ensure-you-Never-Miss-Another-Deadline.jpg"
+                        ),
+                      ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Row(
+                                children: [
+                                  IconButton(onPressed: (){print("thumb_down clicked");},
+                                      icon: Icon(Icons.thumb_down)),
+                                  Text("Dislike")
+                                ]
+                            ),
+                            Row(
+                                children: [
+                                  IconButton(onPressed: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Deadline()));
+                                    print("read_more clicked");},
+                                      icon: Icon(Icons.read_more)),
+                                  Text("Read more")
+                                ]
+                            ),
+                            Row(
+                                children: [
+                                  IconButton(onPressed: (){print("share clicked");},
+                                      icon: Icon(Icons.share)),
+                                  Text("Share")
+                                ]
+                            )
+                          ]
+                      )
+                    ],
+                  )
+
+              )
           )
         ],
       ),
