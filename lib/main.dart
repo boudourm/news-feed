@@ -35,6 +35,27 @@ class NewsFeed extends StatelessWidget {
           Card(
             child: Container(
               height: 300,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage('images/user1.png'),
+                    ),
+                    onTap: (){print("the listTile is clicked");},
+                    title: Text("User 1"),
+                    subtitle: Text("march 31 2021"),
+                    trailing: Icon(Icons.more_horiz),
+                  ),
+                  Text("Deadlines help you to keep moving and deliver"
+                      "content faster and it will increase your efficiency as well."),
+                  SizedBox(height: 16,),
+                  Expanded(
+                    child: Image.asset(
+                      "images/respecter-deadline-freelance-700x525.jpg"
+                    ),
+                  )
+                ],
+              )
 
             )
           )
